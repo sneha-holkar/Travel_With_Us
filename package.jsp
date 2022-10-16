@@ -7,7 +7,9 @@
 
     <!-- Packages Start -->
     <div class="container-fluid py-5">
-        <div class="container pt-5 pb-3">
+        <
+
+
             <div class="text-center mb-3 pb-3">
                 <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Packages</h6>
                 <h1>Perfect Tour Packages</h1>
@@ -21,7 +23,7 @@ try
 	Class.forName("com.mysql.jdbc.Driver");
 	Connection cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/travelwithus","root","");
 	     
-            String sql="select * from package";
+            String sql="select * from package ";
             PreparedStatement pst=cn.prepareStatement(sql);
  ResultSet rs=pst.executeQuery();
  int i=0;
@@ -32,12 +34,15 @@ try
      String timg,tloc,tdur,tdes,tp,tnm;
      tnm=rs.getString("tnm");
      timg=rs.getString("timg");
+    
 	 tloc=rs.getString("tloc");
 	 tdur=rs.getString("tdur");
 	 tdes=rs.getString("tdes");
 	 tp=rs.getString("tp");
-	 
+	  
 
+	 
+	 
 	 %>    
             
             
@@ -65,7 +70,7 @@ try
                                     
                                     <h5 class="m-2"><%=tp %> Rs</h5>&nbsp&nbsp&nbsp
                                     
-                                    <a href="login.jsp" class="btn btn-primary mt-1">Book Now</a>
+                                    <a href="book.jsp?tnm=<%=tnm%>" class="btn btn-primary mt-1">Book Now</a>
                                     <h6 class="m-2"> </h6>
                                      </div>
                             </div>

@@ -10,7 +10,7 @@
 </head>
 <body>
 <!-- Registration Start -->
-    <div class="container-fluid bg-registration py-5" style="margin: 40px 0;">
+    <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-7 mb-5 mb-lg-0">
@@ -30,10 +30,9 @@
                     <div class="card border-0">
                         <div class="card-header bg-primary text-center p-4">
                             <h1 class="text-white m-0">Login Now</h1>
-                        </div>                                       
+                        </div>
                         <div class="card-body rounded-bottom bg-white p-5">
                             <form method= post>
-                                  <p><a href="register.jsp">New User.....Register Here</a></p>         
                                  <div class="form-group">
                                     <input type="email" class="form-control py-2 px-4"  id=" email" name="email" placeholder="Your Email" required="required" />
                                 </div>

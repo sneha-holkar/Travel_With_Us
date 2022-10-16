@@ -3,7 +3,11 @@
     <%@page import="java.time.format.*" %>
 <%@include file="header.jsp" %>
 
+<%
+String em;
+em=(String)session.getAttribute("email");
 
+%>
 
     <!-- Packages Start -->
     <div class="container-fluid py-5">
@@ -12,7 +16,7 @@
             <div class="text-center mb-3 pb-3">
             
                 <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;"></h6>
-                <h1>My Requested Tours</h1>
+                <h1>My Approved Tours</h1>
                 
              
             
@@ -30,8 +34,9 @@ try
 	Connection cn=DriverManager.getConnection("jdbc:mysql://localhost:3306/travelwithus","root","");
 	PreparedStatement pst;
 	        
-            String sql="select * from request where charge='00'";
+            String sql="select * from request where status='yes' and email=? ";
              pst=cn.prepareStatement(sql);
+             pst.setString(1, em);
  ResultSet rs=pst.executeQuery();
  
   
@@ -40,7 +45,7 @@ try
  {
       i++;       
          
-     String em,ddate,edate,sloc,eloc,tnp,stops,veh,date,id,charge;
+     String ddate,edate,sloc,eloc,tnp,stops,veh,date,id,charge;
      em=rs.getString("email");
      ddate=rs.getString("ddate");
 	 edate=rs.getString("edate");

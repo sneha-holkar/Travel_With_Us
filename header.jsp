@@ -73,15 +73,16 @@
                         <a href="service.jsp" class="nav-item nav-link">Services</a>
                         <a href="package.jsp" class="nav-item nav-link">Our Packages</a>
                         <a href="contact.jsp" class="nav-item nav-link">Contact</a>
-                        
-                          <div class="nav-item dropdown">
-                            <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Login</a>
+                 <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">View<br>Tour<br>Progress</a>
                             <div class="dropdown-menu border-0 rounded-0 m-0">
-                                <a href="login.jsp" class="dropdown-item">Login</a>
-                                <a href="adlogin.jsp" class="dropdown-item">Administration Login</a>
-                                
+                                <a href="request.jsp" class="dropdown-item">Requested Tour</a>
+                                <a href="pending.jsp" class="dropdown-item">Pending Tour</a>
+                                 <a href="approved.jsp" class="dropdown-item">Approved Tour</a>
+                              
                             </div>
                         </div> 
+                        <a href="../login.jsp" class="nav-item nav-link">Logout</a>
                     </div>
                 </div>
             </nav>
@@ -90,45 +91,4 @@
     <!-- Navbar End -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    

@@ -3,6 +3,11 @@
     <%@page import="java.time.format.*" %>
 <%@include file="header.jsp" %>
 
+<%
+String em;
+em=(String)session.getAttribute("email");
+
+%>
     <!-- Contact Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
@@ -12,7 +17,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="contact-form bg-white" style="padding: 30px;">
+                    <div class="contact-form bg-white" style="padding: 30px;" style="padding:30px;border:solid 5px #94c559;">
                         <div id="success"></div>
                         <form  method="post">
                             <div class="form-row">
@@ -22,8 +27,8 @@
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group col-sm-6">
-                                    <input type="email" class="form-control py-2 px-4" id="email" name="email" placeholder="Your Email"
-                                        required="required" data-validation-required-message="Please enter your email" />
+                                    <input type="email" class="form-control py-2 px-4" id="em" value="<%=em %>" name="em " placeholder="Your Email"
+                                        required="required" data-validation-required-message="Please enter your email" readonly />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
@@ -52,9 +57,8 @@
 <%if(request.getParameter("btnsub")!=null)
 {
     long millis=System.currentTimeMillis();
-	String nm,em,msg,sub,date;
+	String nm,msg,sub,date;
 	nm=request.getParameter("name");
-	em=request.getParameter("email");
 	sub=request.getParameter("subject");
 	msg=request.getParameter("message");
 	
@@ -72,7 +76,7 @@
 		pst.setString(3,sub);
 		pst.setString(4,msg);
 		pst.setString(5,date);
-		pst.setString(6,"no");
+		pst.setString(6,"yes");
 		pst.executeUpdate();
 		out.println("<script>alert('Message Sent Succesfully');window.location='index.jsp';</script>");
 	}

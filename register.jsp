@@ -12,15 +12,14 @@
 </head>
 <body>
 <!-- Registration Start -->
-<div class="text-center">
-    <div class="container-fluid bg-registration py-7" style="margin: 40px 0;">
+    <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
         <div class="container py-5">
-            <div class="row justify-content-center">
+            <div class="row align-items-center">
                
                 <div class="col-lg-7">
-                    <div class="card border-5">
-                        <div class="card-header bg-primary text-center p-8">
-                            <h1 class="text-white m-0">Register Now</h1>
+                    <div class="card border-0">
+                        <div class="card-header bg-primary text-center p-4">
+                            <h1 class="text-white m-0">Login Now</h1>
                         </div>
                         <div class="card-body rounded-bottom bg-white p-5">
                             <form method= post>
@@ -57,7 +56,6 @@
                  
             </div>
         </div>
-    </div>
     </div>
     <!-- Registration End -->
 <%
